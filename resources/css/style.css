@@ -1,0 +1,351 @@
+/*---- BASIC SETUP ----*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    color: #555;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+}
+
+.clearfix {zoom: 1;}
+.clearfix::after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+/*---- REUSEABLE COMPONENT ----*/
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 80px 0;
+}
+
+.box {
+    padding: 2%;
+}
+
+/*---- HEADINGS ----*/
+
+h1,
+h2 {
+    font-weight: 600;
+    letter-spacing: 1px;
+    
+}
+
+h1 {
+    margin: 0;
+    color: #F3F1F2;
+    font-size: 250%;
+    word-spacing: 3px;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+
+h3 {
+    margin-bottom: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 80%;
+}
+
+h5 {
+    margin-top: 10px; 
+    margin-bottom: 30px;
+    font-size: 75%;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+h2:after {
+    display: block;
+    height: 2px;
+    background-color: #c0392b;
+    content: " ";
+    width: 200px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+/*---- PARAGRAPHS ----*/
+.long-copy {
+    line-height: 145%;
+    width: 70%;
+    margin-left: 15%;
+}
+
+.box p {
+    font-size: 75%;
+    line-height: 145%;
+}
+
+/*---- ICONS ----*/
+.icon-big {
+    margin-top: 30px;
+    font-size: 300%;
+    display: block;
+    color: #c0392b;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/*---- BUTTONS ----*/
+
+.btn:link,
+.btn:visited {
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 200px;
+    transition: background-color 0.3s, border 0.3s, color 0.3s;
+}
+
+.btn-full:link,
+.btn-full:visited {
+    background-color: #c0392b;
+    color: #f3f1f2;
+    border: 2px solid #c0392b;
+    margin-right: 15px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+    border: 2px solid #c0392b;
+    color: #c0392b;
+}
+
+.btn:hover, 
+.btn:active {
+    background-color: #6d2018;
+
+}
+
+.btn-full:hover,
+.btn-full:active {
+    border: 2px solid #6d2018;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+    border: 2px solid #6d2018;
+    color: #f3f1f2;
+}
+
+/*---- HEADER ----*/
+
+header {
+    background-image: linear-gradient(to right top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(./img/hero.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.hero-text-box {
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+}
+
+.logo {
+    height: 120px;
+    width: auto;
+    float: left;
+    margin-top: -10px;
+}
+
+.main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 40px;
+    font-weight: 500;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-left: 50px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    padding: 8px 0;
+    color: #f3f1f2;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+    transition: border-buttom 0.3s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 2px solid #c0392b;
+    color: #c0392b;
+    transition: 0.3s;
+} 
+
+/*---- WORKOUTS ----*/
+.section-workout {
+    padding: 0;
+}
+
+.workout-showcase {
+    list-style: none;
+    width: 100%;
+}
+
+.workout-showcase li {
+    display: block;
+    float: left;
+    width: 25%;
+}
+
+.workout-photo {
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    background-color: #c0392b;
+}
+
+.workout-photo img {
+    opacity: 0.7;
+    width: 100%;
+    height: auto;
+    transform: scale(1.15);
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.workout-photo img:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+/*---- HOW IT WORKS ----*/
+
+.steps-box:first-child {
+    text-align: right;
+    padding-right: 3%;
+}
+
+.steps-box:last-child {
+    padding: 3%;
+    margin-top: 70px;
+
+}
+
+.app-screen {
+    width: 140%;
+}
+
+.works-step {
+    margin-bottom: 50px;
+}
+
+.works-step:last-of-type {
+    margin-bottom: 80px;
+}
+
+.works-step div {
+    color: #c0392b;
+    border: 2px solid #c0392b;
+    display: block;
+    border-radius: 50%;
+    height: 55px;
+    width: 55px;
+    text-align: center;
+    padding: 10px;
+    float: left;
+    font-size: 130%;
+    margin-right: 30px;
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+}
+
+.card {
+	background-color: white;
+	background: linear-gradient(to right bottom, rgba(243, 241, 242, 0.6), rgba(192, 57, 43, 0.6));
+	margin: 20px;
+	padding: 20px;
+	border-radius: 20px;
+	z-index: 2;
+	backdrop-filter: blur(1rem);
+	transition: ease-in 0.3s;
+}
+
+.card img {
+	width: 100%;
+	border-radius: 20px;
+}
+
+.card:hover {
+	transform: scale(1.1);
+	box-shadow: 12px 12px 12px rgba(192, 57, 43, 0.6);
+}
+
+#yoga {
+	font-size: 80%;
+	font-style: italic;
+	text-align: center;
+}
+
+#yoga_title {
+	text-align: center;
+	font-size: 140%;
+	margin-top: 15px;
+	
+}
+
+#cardio {
+	font-size: 80%;
+	font-style: italic;
+	text-align: center;
+}
+
+#cardio_title {
+	text-align: center;
+	font-size: 140%;
+	margin-top: 15px;
+	
+}
+
+#diet {
+	font-size: 80%;
+	font-style: italic;
+	text-align: center;
+}
+
+#diet_title {
+	text-align: center;
+	font-size: 140%;
+	margin-top: 15px;
+	
+}
+
