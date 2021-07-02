@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+*:focus {
+    outline: none;
+}
+
 html {
     color: #555;
     font-family: 'Lato', 'Arial', sans-serif;
@@ -111,10 +115,23 @@ h2:after {
     text-align: center;
 }
 
+.icon-small {
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    color: #c0392b;
+    font-size: 100%;
+    line-height: 100%;
+    vertical-align: middle;
+    margin-top: -4px;
+    margin-right: 10px;
+}
+
 /*---- BUTTONS ----*/
 
 .btn:link,
-.btn:visited {
+.btn:visited,
+input[type=submit] {
     display: inline-block;
     padding: 10px 30px;
     font-weight: 500;
@@ -124,7 +141,8 @@ h2:after {
 }
 
 .btn-full:link,
-.btn-full:visited {
+.btn-full:visited,
+input[type=submit] {
     background-color: #c0392b;
     color: #f3f1f2;
     border: 2px solid #c0392b;
@@ -138,7 +156,9 @@ h2:after {
 }
 
 .btn:hover, 
-.btn:active {
+.btn:active,
+input[type=submit]:hover,
+input[type=submit]:active {
     background-color: #6d2018;
 
 }
@@ -159,6 +179,7 @@ h2:after {
 header {
     background-image: linear-gradient(to right top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(./img/hero.jpg);
     background-size: cover;
+    background-attachment: fixed;
     background-position: center;
     height: 100vh;
 }
@@ -349,3 +370,149 @@ header {
 	
 }
 
+/*---- TESTIMONIALS ----*/
+.section-testimonials {
+    background-image: linear-gradient(to right top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/back-cus.jpg);
+    background-size: cover;
+    color: #f3f1f2;
+    background-attachment: fixed;
+}
+
+blockquote {
+    padding: 2%;
+    font-style: italic;
+    line-height: 145%;
+    position: relative;
+    margin-top: 40px;
+}
+
+blockquote::before {
+    content: "\201C";
+    font-size: 450%;
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+}
+
+
+cite {
+    font-size: 90%;
+    margin-top: 25px;
+    display: block;
+}
+
+
+cite img {
+    height: 55px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/*---- PLANS ----*/
+.plan-box {
+    background-color: rgba(245, 222, 178, 0.5);
+    border-radius: 20px;
+    width: 90%;
+    margin-left: 5%;
+    box-shadow: 6px 6px 8px rgba(128, 128, 128, 0.35);
+}
+
+.plan-box div {
+    padding: 15px;
+    border-bottom: 1px solid gray;
+}
+
+.plan-box div:last-child {
+    text-align: center;
+    border: none;
+}
+
+.plan-price {
+    font-size: 300%;
+    margin-bottom: 10px;
+    font-weight: 250;
+    color: #c0392b;
+}
+
+.plan-price span {
+    font-size: 50%;
+    font-weight: 600;
+}
+
+.plan-price-meal {
+    font-size: 80%;
+}
+
+.plan-box ul {
+    list-style: none;
+    font-style: italic;
+}
+
+.plan-box ul li {
+    padding: 5px 0;
+}
+
+#main {
+    font-size: 200%;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+/*---- FORMS ----*/
+.contact-form {
+    width: 60%;
+    margin: 0 auto;
+}
+
+input[type=text],
+input[type=email],
+select,
+textarea {
+    width: 100%;
+    padding: 7px;
+    border-radius: 10px;
+    border: 1px solid grey;
+}
+
+textarea {
+    height: 100px;
+}
+
+input[type=checkbox] {
+    margin: 10px;
+}
+
+/*---- FOOTER ----*/
+footer {
+    background-color: wheat;
+}
+
+.footer-nav {
+    list-style: none;
+    float: left;
+}
+
+.social-links {
+    list-style: none;
+    float: right;
+}
+
+.footer-nav li,
+.social-links li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-nav li:last-child,
+.social-links li:last-child {
+    margin: 0;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li a:link,
+.social-links li a:visited {
+    text-decoration: none;
+    border: none;
+}
