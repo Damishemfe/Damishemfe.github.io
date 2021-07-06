@@ -10,12 +10,14 @@
     outline: none;
 }
 
-html {
+html,
+body {
     color: #555;
     font-family: 'Lato', 'Arial', sans-serif;
     font-weight: 300;
     font-size: 20px;
     text-rendering: optimizeLegibility;
+    overflow-x: hidden;
 }
 
 .clearfix {zoom: 1;}
@@ -56,6 +58,7 @@ h1 {
     color: #F3F1F2;
     font-size: 250%;
     word-spacing: 3px;
+    margin-bottom: 10px;
 }
 
 h2 {
@@ -81,6 +84,7 @@ h5 {
     font-size: 75%;
     font-weight: 500;
     letter-spacing: 0.5px;
+    color: #f3f1f2;
 }
 
 h2:after {
@@ -182,6 +186,10 @@ header {
     background-attachment: fixed;
     background-position: center;
     height: 100vh;
+}
+
+#stronger {
+    color: #c0392b;
 }
 
 .hero-text-box {
@@ -304,72 +312,6 @@ header {
     margin-right: 30px;
 }
 
-.container {
-	display: flex;
-	justify-content: center;
-	flex-direction: row;
-}
-
-.card {
-	background-color: white;
-	background: linear-gradient(to right bottom, rgba(243, 241, 242, 0.6), rgba(192, 57, 43, 0.6));
-	margin: 20px;
-	padding: 20px;
-	border-radius: 20px;
-	z-index: 2;
-	backdrop-filter: blur(1rem);
-	transition: ease-in 0.3s;
-}
-
-.card img {
-	width: 100%;
-	border-radius: 20px;
-}
-
-.card:hover {
-	transform: scale(1.1);
-	box-shadow: 12px 12px 12px rgba(192, 57, 43, 0.6);
-}
-
-#yoga {
-	font-size: 80%;
-	font-style: italic;
-	text-align: center;
-}
-
-#yoga_title {
-	text-align: center;
-	font-size: 140%;
-	margin-top: 15px;
-	
-}
-
-#cardio {
-	font-size: 80%;
-	font-style: italic;
-	text-align: center;
-}
-
-#cardio_title {
-	text-align: center;
-	font-size: 140%;
-	margin-top: 15px;
-	
-}
-
-#diet {
-	font-size: 80%;
-	font-style: italic;
-	text-align: center;
-}
-
-#diet_title {
-	text-align: center;
-	font-size: 140%;
-	margin-top: 15px;
-	
-}
-
 /*---- TESTIMONIALS ----*/
 .section-testimonials {
     background-image: linear-gradient(to right top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/back-cus.jpg);
@@ -486,6 +428,8 @@ input[type=checkbox] {
 /*---- FOOTER ----*/
 footer {
     background-color: wheat;
+    padding: 50px;
+    font-size: 80%;
 }
 
 .footer-nav {
@@ -515,4 +459,53 @@ footer {
 .social-links li a:visited {
     text-decoration: none;
     border: none;
+    color: #555;
+}
+
+.social-links li a:link,
+.social-links li a:visited {
+    font-size: 160%;
+}
+
+.flaticon-facebook-app-symbol,
+.flaticon-whatsapp,
+.flaticon-twitter,
+.flaticon-slack,
+.flaticon-linkedin,
+.flaticon-instagram,
+.flaticon-google-plus {
+    transition: color 0.5s;
+}
+
+.flaticon-facebook-app-symbol:hover{
+    color: #3b5998;
+}
+
+.flaticon-whatsapp:hover{
+    color: #25d366;
+}
+
+.flaticon-twitter:hover{
+    color: #00aced;
+}
+
+.flaticon-slack:hover{
+    color: #e01e5a;
+}
+
+.flaticon-linkedin:hover{
+    color: #0a66c2;
+}
+
+.flaticon-instagram:hover{
+    color: #c32aa3;
+}
+
+.flaticon-google-plus:hover{
+    color: #ea4335;
+}
+
+footer p {
+    text-align: center;
+    margin-top: 20px;
 }
